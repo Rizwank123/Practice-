@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="spcg" class="com.masai.SuperContaGame"/>
+    <bean id="pman" class="com.masai.PacManGame"/>
+    <bean id="mario" class="com.masai.MarioGame"/>
+    
+    <bean id="gRun" class="com.masai.GameRunner">
+   
+        <property name="gameInterface" ref="spcg"/>
+       
+    </bean>
+
+</beans>
