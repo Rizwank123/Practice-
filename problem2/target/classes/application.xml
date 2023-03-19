@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<beans xmlns="http://www.springframework.org/schema/beans"
+	    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	    xsi:schemaLocation="http://www.springframework.org/schema/beans
+	        https://www.springframework.org/schema/beans/spring-beans.xsd">
+	   
+	        	
+	        <bean id="dev1" class="com.masai.Developer">
+	        <property name="id" value="1"/>
+	        <property name="name" value="Rizwan"/>
+	        <property name="age" value="25"/>
+	        <property name="email" value="Rizwan@gmail.com"/>
+	        <property name="noOfProjectDone" value="3"/>
+	        <property name="mobile" value="9999990909"/>
+	        </bean>
+	        	<bean id="dev2" class="Developer">
+	        <property name="id" value="2"/>
+	        <property name="name" value="vishal"/>
+	        <property name="age" value="27"/>
+	        <property name="email" value="v@gmail.com"/>
+	        <property name="noOfProjectDone" value="2"/>
+	        <property name="mobile" value="9999990909"/>
+	        </bean>
+	        <bean id="dev3" class="Developer">
+	        <property name="id" value="3"/>
+	        <property name="name" value="Kshitija"/>
+	        <property name="age" value="21"/>
+	        <property name="email" value="kshitija@gmail.com"/>
+	        <property name="noOfProjectDone" value="5"/>
+	        <property name="mobile" value="9999990909"/>
+	        </bean>
+	        
+	        
+	        <bean id='pro1' class="Project">
+	        <property name="id" value="1"/>
+			<property name="name" value="Project A"/>
+			<property name="duration" value="6"/>
+	        </bean>
+	        
+	        <bean id='pro2' class="Project">
+	        <property name="id" value="2"/>
+			<property name="name" value="Project C"/>
+			<property name="duration" value="4"/>
+	        </bean>
+	        <bean id='pro3' class="Project">
+	        <property name="id" value="3"/>
+			<property name="name" value="Project d"/>
+			<property name="duration" value="6"/>
+	        </bean>
+	        <bean id="devService" class="DeveloperService">
+	        <property name="projectMap">
+	        <map>
+	        <entry key-ref="dev1" value-ref="pro1"/>
+	        <entry key-ref="dev2" value-ref="pro2"/>
+	        <entry key-ref="dev3" value-ref="pro3"/>
+	        </map>
+	        </property>
+	        <property name="developerList">
+	        <list>
+	         <ref  bean="dev1" />
+	         <ref  bean="dev2" />
+	         <ref  bean="dev2" />
+	        <bean class="Developer">
+	        <property name="id" value="3"/>
+	        <property name="name" value="Rizwan"/>
+	        <property name="age" value="25"/>
+	        <property name="noOfProjectDone" value="4"/>
+	        <property name="email" value="rizwan@gmail.com"/>
+	        <property name="mobile" value="9900990088"/>
+	        
+	        </bean>
+	        <bean class="Developer">
+	        <property name="id" value="5"/>
+	        <property name="name" value="Vishal"/>
+	        <property name="age" value="27"/>
+	        <property name="noOfProjectDone" value="4"/>
+	        <property name="email" value="v@gmail.com"/>
+	        <property name="mobile" value="9900990088"/>
+	        
+	        </bean>
+	        <bean class="Developer">
+	        <property name="id" value="4"/>
+	        <property name="name" value="Kshitija"/>
+	        <property name="age" value="21"/>
+	        <property name="noOfProjectDone" value="4"/>
+	        <property name="email" value="k@gmail.com"/>
+	        <property name="mobile" value="9900990088"/>
+	        
+	        </bean>
+	        </list>
+	        </property>
+	        </bean>
+	</beans>
