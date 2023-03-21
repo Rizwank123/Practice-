@@ -11,6 +11,7 @@ public class Main {
 		DeveloperService ds=(DeveloperService)ctx.getBean("devService");
 		ds.printProjectMap();
 		ds.printDeveloperList();
+		
 	}
 
 }
